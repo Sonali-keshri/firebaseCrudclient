@@ -1,0 +1,132 @@
+.add_Btn{
+  text-align: right;
+}
+button>svg{
+  font-size: 1.2rem;
+}
+.addlink{
+  text-decoration: none;
+  color: white;
+}
+.addlink:hover{
+  color: white;
+}
+.container{
+  overflow: auto;
+}
+a{
+  text-decoration: none;
+}
+.home{
+  color: black;
+}
+
+.profileImg{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+.left_view h4{
+  font-size: 21px;
+}
+.left_view span{
+  font-weight:400;
+}
+.left_view p{
+  font-weight: 600;
+}
+.detailBtn{
+ text-align: right; 
+}
+/* .right_view h4{
+  font-size: 21px;
+} */
+.right_view span{
+  font-weight:400;
+}
+.right_view p{
+  font-weight: 600;
+}
+.button{
+  margin-left: .2rem;
+}
+
+/* Sign Un page */
+.page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.container{
+  display: grid;
+  width: 70%;
+}
+.signupContainer{
+  grid-template-columns: 45% 55% ;
+}
+
+.formside{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-left: 3rem;
+}
+.formside> h2{
+  margin-bottom: .8rem;
+}
+.formside> p{
+  margin-top: 1rem;
+}
+
+.signup-Form{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+.signup-Form> input{
+  border-radius: 6px;
+  padding: .3rem .6rem;
+  border: 1px solid grey;
+}
+ button{
+  /* margin-bottom: 1rem; */
+  padding: .3rem 1.2rem;
+  border: none;
+  background-color: #2C2E43;
+  color: white;
+}
+.googlebtn{
+  background-color: #185ADB;
+  margin-bottom: 1rem;
+}
+.googlebtn> svg{
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.imgside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.img{
+  width: 65%;
+}
+.signinimg{
+  width:60%;
+}
+.signinContainer{
+
+  grid-template-columns: 45% 45% 10%;
+}
+
+.forgetpass{
+  text-align: right;
+  cursor: pointer;
+  
+}
