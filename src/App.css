@@ -54,13 +54,13 @@ a{
 /* Sign Un page */
 .page{
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
-.container{
+.wrapper{
   display: grid;
   width: 70%;
 }
@@ -121,7 +121,6 @@ a{
   width:60%;
 }
 .signinContainer{
-
   grid-template-columns: 45% 45% 10%;
 }
 
@@ -129,4 +128,51 @@ a{
   text-align: right;
   cursor: pointer;
   
+}
+.loaderBox{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader{
+height: 8rem;
+}
+
+@media screen and (max-width:1007px){
+  .wrapper{
+    width: 100%;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .imgside{
+    width: 50%;
+  }
+  .formside{
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width:640px){
+  .wrapper{
+    width: 100%;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .imgside{
+    width: 60%;
+  }
+  .signinContainer{
+   flex-direction: column;
+  }
+  .signupContainer{
+ flex-direction: column-reverse;
+  }
+  .formside{
+    margin: 0 auto;
+  }
 }

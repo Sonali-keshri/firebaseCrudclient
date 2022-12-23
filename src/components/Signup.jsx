@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import SignupImg from '../assets/img1.png';
 import {Link, useNavigate} from "react-router-dom";
-// import {GoogleButton} from 'react-google-button';
 import { useUserAuth } from '../context/userAuthContext';
 import { Alert } from 'react-bootstrap';
-import {AiOutlineGooglePlus} from 'react-icons/ai';
+
 
 
 
@@ -13,7 +12,7 @@ const Signup = () => {
  const [email, setEmail] = useState('')
  const [password, setPassword] = useState('')
  const [error, setError] = useState('')
- const {signup, googlesignup} = useUserAuth();
+ const {signup} = useUserAuth();
 
  const navigate = useNavigate();
  const handleSubmit = async (e)=>{
@@ -26,19 +25,10 @@ const Signup = () => {
     setError(error.message);
   }
  }
- const handleGoogleSignup = async (e)=>{
-  e.preventDefault();
-  try {
-    await googlesignup();
-    navigate('/');
-  } catch (error) {
-    setError(error.message);
-  }
-}
   return (
     <>
     <div className="page">
-      <div  className='container signupContainer'>
+      <div  className='wrapper signupContainer'>
         <div className="formside">
           {error && <Alert variant='danger'>{error}</Alert>}
             <h2>Sign Up</h2>
@@ -46,7 +36,6 @@ const Signup = () => {
                 <input type="email" placeholder=' Your Email' onChange={(e)=> setEmail(e.target.value)}/>
                 <input type="password" placeholder='Your Password' onChange={(e)=> setPassword(e.target.value)}/>
                 <button className='' type="submit">Submit</button>
-                <button className='googlebtn' onClick={handleGoogleSignup}><AiOutlineGooglePlus/>Sign In with Google</button>
             </form>
             <p>Already have an account ? <span><Link to='/login'>Login</Link></span></p>
         </div>

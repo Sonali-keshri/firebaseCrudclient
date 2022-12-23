@@ -25,7 +25,8 @@ const Details = () => {
 
   const getdata = async ()=>{
 
-    const res = await fetch(`https://firebaseauth-crudapp.herokuapp.com/getuser/${id}`, {
+    // const res = await fetch(`https://firebaseauth-crudapp.herokuapp.com/getuser/${id}`, {
+    const res = await fetch(`https://fiirebasecrudserver.onrender.com/getuser/${id}`, {
         method:"GET",
         headers:{
             "Content-Type": "application/json"
@@ -57,7 +58,8 @@ const toastOptions = {
   theme:"dark",
 };
 const deleteuser = async (id)=>{
-  const res2 = await fetch(`/deleteuser/${id}`, {
+  // const res2 = await fetch(`https://firebaseauth-crudapp.herokuapp.com/deleteuser/${id}`, {
+  const res2 = await fetch(`https://fiirebasecrudserver.onrender.com/deleteuser/${id}`, {
       method:"DELETE",
       headers:{
           "Content-Type": "application/json"

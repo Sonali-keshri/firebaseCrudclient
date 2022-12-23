@@ -3,15 +3,13 @@ import SigninImg from "../assets/img2.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from '../context/userAuthContext';
 import { Alert } from 'react-bootstrap';
-import {AiOutlineGooglePlus} from 'react-icons/ai';
-import { async } from "@firebase/util";
 
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { login , googlesignin, passwordreset} = useUserAuth();
+  const { login } = useUserAuth();
 
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -25,29 +23,11 @@ const Login = () => {
     }
   };
 
-  const handleGoogleSignin = async (e)=>{
-    e.preventDefault();
-    try {
-      await googlesignin();
-      navigate('/');
-    } catch (error) {
-      setError(error.message);
-    }
-  }
-  const handleforgetpassword = async (e) =>{
-    e.preventDefault();
-    try {
-      await passwordreset();
-    } catch (error) {
-      setError(error.message)
-    }
-  }
-
   return (
     <>
       <div className="page">
-        <div className="container signinContainer">
-          <div className="imgside ">
+        <div className="wrapper signinContainer">
+          <div className="imgside">
             <img src={SigninImg} alt="img" className="signinimg" />
           </div>
           <div className="formside signinForm">
@@ -59,9 +39,7 @@ const Login = () => {
               <button className="" type="submit">
                 Submit
               </button>
-       
-              <button className='googlebtn' onClick={handleGoogleSignin}><AiOutlineGooglePlus/>Sign In with Google</button>
-              <span className="forgetpass" onClick={handleforgetpassword}>Forget Password</span>
+              <span className="forgetpass" >Forget Password</span>
             </form>
             <p>
               Already have an account ?{" "}

@@ -40,7 +40,8 @@ const navigate = useNavigate();
   console.log(id);
 
   const showdata = async () => {
-    const res = await fetch(`/getuser/${id}`, {
+    // const res = await fetch(`https://firebaseauth-crudapp.herokuapp.com/getuser/${id}`, {
+    const res = await fetch(`https://fiirebasecrudserver.onrender.com/getuser/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +67,8 @@ const navigate = useNavigate();
   const updateuser =async (e)=>{
     e.preventDefault();
     const {name, email, age, mobile, work, add, desc} = inpVal;
-    const res2 = await fetch(`/updateuser/${id}`, {
+    // const res2 = await fetch(`https://firebaseauth-crudapp.herokuapp.com/updateuser/${id}`, {
+    const res2 = await fetch(`https://fiirebasecrudserver.onrender.com/updateuser/${id}`, {
         method:"PATCH",
             headers:{
                 "Content-Type": "application/json"

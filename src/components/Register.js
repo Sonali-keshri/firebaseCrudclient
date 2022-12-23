@@ -38,9 +38,9 @@ const Register = () => {
     const addinpdata = async (e)=>{
         e.preventDefault();
         const {name, email,age,mobile,work,add,desc} = inpVal;
-        // console.log(name)
 
-        const res = await fetch('https://firebaseauth-crudapp.herokuapp.com/register', {
+        // const res = await fetch('https://firebaseauth-crudapp.herokuapp.com/register', {
+        const res = await fetch('https://fiirebasecrudserver.onrender.com/register', {
             method:"POST",
             headers:{
                 "Content-Type": "application/json"
@@ -54,10 +54,8 @@ const Register = () => {
 
         if(res.status === 422 || !data){
             toast.warning("Please fill the form", toastOptions)
-            // alert("Please fill the form");
             console.log("error ");
         }else{
-            // alert('data added'); 
             toast.success("Sucessfully Added", toastOptions)
             navigate('/');
         }
